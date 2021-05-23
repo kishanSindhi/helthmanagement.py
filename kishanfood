@@ -1,0 +1,64 @@
+print("Welcome to Kishan's Health Management System")
+name = int(input("1 for Kishan , 2 for Akshay\n"))
+admin = int(input("1 to write data , 2 to read data\n"))
+
+if admin == 1:
+    file = int(input("1 to enter data in food , 2 to enter data in excersise\n"))
+    if name == 1 and file == 1:
+        f11 = open("kishanfood" , "a")
+        food = input("Kishan aje te su khadu?\n")
+        f11.write(food)
+        f11.close()
+    
+    elif name == 1 and file == 2:
+        f12 = open("kishanex" , "a")
+        excersise = input("kishan aje ketlu workout kariu?\n")
+        f12.write(excersise)
+        f12.close()
+
+    elif name == 2 and file == 1:
+        f21 = open("akshayfood" , "a")
+        food = input("Akshay aje ketlu khadu?\n")
+        f21.write(food)
+        f21.close()
+    
+    elif name == 2 and file == 2:
+        f22 = open("akshayex" , "a")
+        excersise = input("Akshay aje ketlu workout kariu?\n")
+        f22.write(excersise)
+        f22.close()
+
+    else:
+        print("Enter valid number...:)")
+
+elif admin == 2:
+    file = int(input("1 to read data in food , 2 to read data in excersise\n"))
+    if name == 1 and file == 1:
+        f11 = open("kishanfood" , "rt" )
+        details = f11.read()
+        print(details)
+        f11.close()
+    
+    elif name == 1 and file == 2:
+        f12 = open("kishanex" , "rt" )
+        details = f12.read()
+        print(details)
+        f12.close()
+
+    elif name == 2 and file == 1:
+        f21 = open("akshayfood" , "rt")
+        details = f21.read()
+        print(details)
+        f21.close()
+    
+    elif name == 2 and file == 2:
+        f22 = open("akshayex" , "rt" )
+        details = f22.read()
+        print(details)
+        f22.close()
+
+    else:
+        print("Enter valid number...:)")
+
+else:
+    print("Enter valid number...:)")
