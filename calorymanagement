@@ -6,25 +6,25 @@ if admin == 1:
     file = int(input("1 to enter data in food , 2 to enter data in excersise\n"))
     if name == 1 and file == 1:
         f11 = open("kishanfood" , "a")
-        food = input("Kishan aje te su khadu?\n")
+        food = input("Kishan what do you eat?\n")
         f11.write(food)
         f11.close()
     
     elif name == 1 and file == 2:
         f12 = open("kishanex" , "a")
-        excersise = input("kishan aje ketlu workout kariu?\n")
+        excersise = input("Kishan how much excercise you have done?\n")
         f12.write(excersise)
         f12.close()
 
     elif name == 2 and file == 1:
         f21 = open("akshayfood" , "a")
-        food = input("Akshay aje ketlu khadu?\n")
+        food = input("Akshay what do you have for food?\n")
         f21.write(food)
         f21.close()
     
     elif name == 2 and file == 2:
         f22 = open("akshayex" , "a")
-        excersise = input("Akshay aje ketlu workout kariu?\n")
+        excersise = input("Akshay how much workout do you did today?\n")
         f22.write(excersise)
         f22.close()
 
